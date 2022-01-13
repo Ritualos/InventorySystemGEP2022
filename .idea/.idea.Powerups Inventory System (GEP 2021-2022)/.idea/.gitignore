@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/.idea.Powerups Inventory System (GEP 2021-2022).iml
+/contentModel.xml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\Ritualos\Desktop\uni files\Build\Powerups Inventory System (GEP 2021-2022)\.idea\.idea.Powerups Inventory System (GEP 2021-2022)\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
