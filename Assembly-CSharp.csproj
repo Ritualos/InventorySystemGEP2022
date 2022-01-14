@@ -56,9 +56,11 @@
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\Demo_GM.cs" />
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\ColliderEvent_Sender.cs" />
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\WoodDoll_Mgr.cs" />
-     <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\DestroyEffect.cs" />
+     <Compile Include="Assets\Scripts\DestroyEffect.cs" />
      <Compile Include="Assets\Free_Pack\BURLY-MAN_1_swordsman\Free_GM.cs" />
-     <Compile Include="Assets\Scripts\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
      <None Include="Assets\Dragon Warrior Files\Read Me.txt" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
