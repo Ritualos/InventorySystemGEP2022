@@ -1,3 +1,5 @@
 # InventorySystemGEP2022
-this is the repo for the Games Engine Programming project submission
-includes assets and code used for the Unity project
+
+This is the repository for the Games Engine Programming project submission
+
+Includes assets and code used for the Unity project
