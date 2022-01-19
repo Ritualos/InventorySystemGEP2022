@@ -1,13 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CharacterController_2D : MonoBehaviour {
-
-  
-
-
-    
+public class CharacterController_2D : MonoBehaviour
+{
     Rigidbody2D m_rigidbody;
     Animator m_Animator;
     Transform m_tran;
@@ -23,20 +18,23 @@ public class CharacterController_2D : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         m_rigidbody = this.GetComponent<Rigidbody2D>();
         m_Animator = this.transform.Find("BURLY-MAN_1_swordsman_model").GetComponent<Animator>();
         m_tran = this.transform;
-        m_SpriteGroup = this.transform.Find("BURLY-MAN_1_swordsman_model").GetComponentsInChildren<SpriteRenderer>(true);
-
-  
+        m_SpriteGroup = this.transform.Find("BURLY-MAN_1_swordsman_model")
+            .GetComponentsInChildren<SpriteRenderer>(true);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
+     //   if (EventSystem.current.IsPointerOverGameObject()) //checks whether the mouse is hovering over a game object
+     //   return;
 
 
-        spriteOrder_Controller();
+            spriteOrder_Controller();
 
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -46,8 +44,6 @@ public class CharacterController_2D : MonoBehaviour {
             m_Animator.SetTrigger("Attack");
 
             m_rigidbody.velocity = new Vector3(0, 0, 0);
-
-
         }
 
         else if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -57,33 +53,25 @@ public class CharacterController_2D : MonoBehaviour {
             m_Animator.SetTrigger("Attack2");
 
             m_rigidbody.velocity = new Vector3(0, 0, 0);
-
-
-
         }
 
 
         else if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-          
             Debug.Log("1");
             m_Animator.Play("Hit");
-
-
-
-
         }
         else if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             Debug.Log("2");
             m_Animator.Play("Die");
-
-
         }
 
 
-        if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Die")||
-            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Hit")|| m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
+        if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") ||
+            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Die") ||
+            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") ||
+            m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
             return;
 
         Move_Fuc();
@@ -91,23 +79,19 @@ public class CharacterController_2D : MonoBehaviour {
 
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
-       
 
 
-        m_Animator.SetFloat("MoveSpeed", Mathf.Abs(h )+Mathf.Abs (v));
-
- 
+        m_Animator.SetFloat("MoveSpeed", Mathf.Abs(h) + Mathf.Abs(v));
     }
 
     public int sortingOrder = 0;
     public int sortingOrderOrigine = 0;
 
     private float Update_Tic = 0;
-    private float Update_Time = 0.1f;
+    //private float Update_Time = 0.1f;
 
     void spriteOrder_Controller()
     {
-
         Update_Tic += Time.deltaTime;
 
         if (Update_Tic > 0.1f)
@@ -117,16 +101,11 @@ public class CharacterController_2D : MonoBehaviour {
             //  Debug.Log("sortingOrder::" + sortingOrder);
             for (int i = 0; i < m_SpriteGroup.Length; i++)
             {
-
                 m_SpriteGroup[i].sortingOrder = sortingOrderOrigine - sortingOrder;
-
             }
 
             Update_Tic = 0;
         }
-
-     
-
     }
 
     // character Move Function
@@ -134,46 +113,37 @@ public class CharacterController_2D : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.A))
         {
-          //  Debug.Log("Left");
+            //  Debug.Log("Left");
             m_rigidbody.AddForce(Vector2.left * MoveSpeed);
             if (B_FacingRight)
-                Filp();
-
-
+                Flip();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-          //  Debug.Log("Right");
+            //  Debug.Log("Right");
             m_rigidbody.AddForce(Vector2.right * MoveSpeed);
             if (!B_FacingRight)
-                Filp();
+                Flip();
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-           // Debug.Log("up");
+            // Debug.Log("up");
             m_rigidbody.AddForce(Vector2.up * MoveSpeed);
-          
         }
         else if (Input.GetKey(KeyCode.S))
         {
-           // Debug.Log("Down");
+            // Debug.Log("Down");
             m_rigidbody.AddForce(Vector2.down * MoveSpeed);
-          
-            
         }
-
-
-     
-
     }
 
 
-    // character Filp 
-    bool B_Attack = false;
+    // bool B_Attack = false;
     bool B_FacingRight = true;
 
-    void Filp()
+    // character Flip 
+    void Flip()
     {
         B_FacingRight = !B_FacingRight;
 
@@ -182,13 +152,4 @@ public class CharacterController_2D : MonoBehaviour {
 
         m_tran.localScale = theScale;
     }
-
-
- 
-    //   Sword,Dagger,Spear,Punch,Bow,Gun,Grenade
-
-
-  
-
-  
 }
