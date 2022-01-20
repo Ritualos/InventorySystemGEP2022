@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4aa1efd3-5ab6-b877-aef4-91b17141e74c}</ProjectGuid>
+    <ProjectGuid>{a5845e47-9994-c388-fa6a-dc3eb85d0b1e}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,7 +55,6 @@
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\CharacterController_2D.cs" />
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\Demo_GM.cs" />
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\ColliderEvent_Sender.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Free_Pack\Demo_GameResource\Script\WoodDoll_Mgr.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
@@ -64,8 +63,9 @@
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\InventoryUI.cs" />
      <Compile Include="Assets\Free_Pack\BURLY-MAN_1_swordsman\Free_GM.cs" />
-     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\ItemPickup.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -312,7 +312,7 @@
  <HintPath>D:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -660,112 +660,103 @@
  <HintPath>D:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="PsdPlugin">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.IK.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Psdimporter.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Path.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.IK.Runtime">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Powerups Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Ritualos/Desktop/uni files/Build/Inventory System (GEP 2021-2022)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Animations.meta" />
-    <Content Include="Assets\Materials.meta" />
-    <Content Include="Assets\Scenes.meta" />
-    <Content Include="Assets\ScriptableObjectItems.meta" />
-    <Content Include="Assets\Scripts\Inventory.cs.meta" />
-    <Content Include="Assets\Scripts\InventorySlot.cs.meta" />
-    <Content Include="Assets\Scripts\InventoryUI.cs.meta" />
-    <Content Include="Assets\Scripts\ItemPickup.cs.meta" />
-    <Content Include="Assets\TextMesh Pro.meta" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

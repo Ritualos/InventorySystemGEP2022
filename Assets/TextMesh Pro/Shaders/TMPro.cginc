@@ -1,4 +1,4 @@
-﻿float2 UnpackUV(float uv)
+float2 UnpackUV(float uv)
 { 
 	float2 output;
 	output.x = floor(uv / 4096);

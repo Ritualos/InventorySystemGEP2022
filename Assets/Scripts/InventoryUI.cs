@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -14,7 +14,11 @@ public class InventoryUI : MonoBehaviour
         inventory.OnItemChangedCallback += UpdateUI;
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
-    
+
+    void Update()
+    {
+       
+    }
 
     void UpdateUI()
     { 

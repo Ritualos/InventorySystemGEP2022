@@ -1,4 +1,4 @@
-﻿Shader "TextMeshPro/Bitmap Custom Atlas" {
+Shader "TextMeshPro/Bitmap Custom Atlas" {
 
 Properties {
 	_MainTex		("Font Atlas", 2D) = "white" {}

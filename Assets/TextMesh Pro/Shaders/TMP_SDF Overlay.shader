@@ -1,4 +1,4 @@
-﻿Shader "TextMeshPro/Distance Field Overlay" {
+Shader "TextMeshPro/Distance Field Overlay" {
 
 Properties {
 	_FaceTex			("Face Texture", 2D) = "white" {}
